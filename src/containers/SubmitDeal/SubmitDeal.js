@@ -94,10 +94,10 @@ class SubmitDeal extends Component {
             dealData: formData
         }
 
-        axios.post('/deals.json', deal)
+        axios.post('/deal-list/deal-summary.json', deal)
             .then(response => {
                 this.setState({loading: false});
-                this.props.history.push('/')
+                this.props.history.push('/deal-list')
             })
             .catch(error => {
                 this.setState({loading: false});
@@ -134,9 +134,11 @@ class SubmitDeal extends Component {
 
         let formIsValid = true;
 
-   
+        for (let inputIdentifier in updatedDealForm) {
+            formIsValid = updatedDealForm[inputIdentifier].valid && formIsValid;
+        }
         console.log(formIsValid);
-        this.setState({orderForm: updatedDealForm, formIsValid: formIsValid})
+        this.setState({dealForm: updatedDealForm, formIsValid: formIsValid})
 
     }
 

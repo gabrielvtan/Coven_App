@@ -16,7 +16,7 @@ class App extends Component {
           <Layout>
               <Switch>
                 <Route path="/submit-deal" component={SubmitDeal}/>
-                <Route path="/deal-list/deal-summary" component={DealSummary}/>
+                <Route path="/deal-list/deal-summary/:id" exact component={DealSummary}/>
                 <Route path="/deal-list" component={DealList}/>
                 <Route path="/contributions" component={Contributions}/>
                 <Route path="/profile" component={Profile}/>

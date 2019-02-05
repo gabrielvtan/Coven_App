@@ -4,4 +4,6 @@ const instance = axios.create({
     baseURL: 'https://coven-d48fc.firebaseio.com/'
 })
 
+instance.defaults.headers.common['Authorization'] = 'AUTH TOKEN FROM INSTANCE';
+
 export default instance; 
