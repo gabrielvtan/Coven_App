@@ -27,19 +27,17 @@ class DealDetails extends Component {
             details = (
             <Aux>
                 <div className="jumbotron DealDetails">
-                    <h2 className="display-4">Company Profile</h2>
+                    <h2 className="display-4">{this.state.loadedDeal.name}</h2>
                     <hr className="my-4"/>
-                    <p className="lead">{this.state.loadedDeal.name}</p>
                     <p>Headquarters: {this.state.loadedDeal.city}</p>
                     <p>Primary Industry: {this.state.loadedDeal.industry}</p>
-                    <p>Amount Raised: {this.state.loadedDeal.raised}</p>
+                    
                     <p>Descriptiopn: {this.state.loadedDeal.description}</p>
                 </div>
                 <div className="jumbotron DealDetails">
                     <h2 className="display-4 heading">Deal Details</h2>
                     <hr className="my-4"/>
-                    <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                    <p>Amount Raised: {(this.state.loadedDeal.raised).toLocaleString()}</p>
                 </div>
             </Aux>
             );

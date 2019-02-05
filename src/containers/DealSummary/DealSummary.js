@@ -3,6 +3,9 @@ import React, {Component} from 'react';
 import ThreadDisplay from '../../components/ThreadDisplay/ThreadDisplay';
 import DealDetails from '../../components/DealDetails/DealDetails';
 import axios from '../../axios-posts';
+import Aux from '../../hoc/Auxilary/Aux';
+
+import './DealSummary.css';
 
 class DealSummary extends Component {
     state = {
@@ -22,10 +25,11 @@ class DealSummary extends Component {
     
     render () {
         return (
-            <div>
+            <Aux>
                 <DealDetails data={this.state.loadedDeal}/>
+                <h1 className="DealSummary">Enter Your Comments below Regarding this deal</h1>
                 <ThreadDisplay/>
-            </div>
+            </Aux>
         );
     }
 }

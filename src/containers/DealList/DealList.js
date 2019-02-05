@@ -6,6 +6,8 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import Aux from '../../hoc/Auxilary/Aux';
 
+import './DealList.css';
+
 class DealList extends Component {
     state = {
         deals: [],
