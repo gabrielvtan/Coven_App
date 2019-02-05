@@ -1,0 +1,16 @@
+.SubmitDeal {
+    margin: 2px auto;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 2px 3px #ccc;
+    border: 1px solid #eee;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+
+@media (min-width: 600px) {
+    .SubmitDeal {
+        width: 500px;
+    }
+}

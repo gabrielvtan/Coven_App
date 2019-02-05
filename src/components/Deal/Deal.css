@@ -1,0 +1,9 @@
+.deal-body {
+    margin: 1em 20%;
+}
+
+@media(max-width: 900px) {
+    .deal-body {
+        margin: 1em;
+    }
+}
