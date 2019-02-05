@@ -63,10 +63,10 @@ class SubmitDeal extends Component {
                 touched: false
             },
             description: {
-                elementType: 'input',
+                elementType: 'textarea',
                 elementConfig: {
                     type: 'text',
-                    placeholder: 'Enter a brief description of the company'
+                    placeholder: 'Enter a brief description of the company',
                 },
                 value: '',
                 validation: {
@@ -175,7 +175,7 @@ class SubmitDeal extends Component {
 
         return (
             <div className="SubmitDeal">
-                <h1>Enter your Deal Details</h1>
+                <h1>Enter Your Deal Details</h1>
                 {form}
             </div>
         );

@@ -7,6 +7,7 @@ import SubmitDeal from './containers/SubmitDeal/SubmitDeal';
 import DealList from './containers/DealList/DealList';
 import Contributions from './containers/Contributions/Contributions';
 import Profile from './containers/Profile/Profile';
+import Home from './containers/Home/Home';
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route path="/deal-list" component={DealList}/>
                 <Route path="/contributions" component={Contributions}/>
                 <Route path="/profile" component={Profile}/>
+                <Route path="/" component={Home}/>
               </Switch>
           </Layout>
       </div>

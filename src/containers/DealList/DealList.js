@@ -3,6 +3,8 @@ import Deal from '../../components/Deal/Deal';
 import axios from '../../axios-posts';
 import {Link} from 'react-router-dom';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+import Spinner from '../../components/UI/Spinner/Spinner';
+import Aux from '../../hoc/Auxilary/Aux';
 
 class DealList extends Component {
     state = {
@@ -33,7 +35,7 @@ class DealList extends Component {
     }
 
     render () {
-            let deals = <p style={{textAlign: 'center'}}>404:SOMETHING WENT WRONG!</p>
+            let deals = <Spinner />
             if (!this.state.loading) {
                 deals = this.state.deals.map(deal => {
                     return (
@@ -49,9 +51,12 @@ class DealList extends Component {
                 });
             }
             return (
-                <section>
-                    {deals}
-                </section>
+                <Aux>
+                    <h1 className="Heading"> Please select a Deal below</h1>
+                    <section>
+                        {deals}
+                    </section>
+                </Aux>
             );
 }}
 
